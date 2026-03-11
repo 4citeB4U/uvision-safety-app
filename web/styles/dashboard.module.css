@@ -1,0 +1,174 @@
+/* ── Layout ─────────────────────────────────────────────────────────────────── */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0a0a0a;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: #00e5ff;
+}
+
+.headerSubtitle {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 2px;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────────── */
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0d1117;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.sidebarHeader {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebarTitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.sidebarCount {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+/* ── Incident list ───────────────────────────────────────────────────────────── */
+.incidentList {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.incidentList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.incidentList::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.incidentItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.incidentItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.incidentItemSelected {
+  background: rgba(0, 229, 255, 0.08);
+  border-left: 3px solid #00e5ff;
+}
+
+.incidentIcon {
+  font-size: 20px;
+}
+
+.incidentDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.incidentType {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.incidentTime {
+  font-size: 11px;
+  color: #888;
+}
+
+.incidentCoords {
+  font-size: 10px;
+  color: #555;
+  font-variant-numeric: tabular-nums;
+}
+
+.incidentG {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.listEmpty {
+  padding: 24px 16px;
+  color: #555;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ── Map area ────────────────────────────────────────────────────────────────── */
+.mapArea {
+  flex: 1;
+  position: relative;
+}
+
+/* ── Stats bar ───────────────────────────────────────────────────────────────── */
+.statsBar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 24px;
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statValue {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+}
