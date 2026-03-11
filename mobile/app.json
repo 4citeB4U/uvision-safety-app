@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "UVision",
+    "slug": "uvision-safety-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.uvision.safetyapp",
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "UVision needs your location to detect incidents and log them with GPS coordinates.",
+        "NSLocationWhenInUseUsageDescription": "UVision needs your location to detect incidents and log them with GPS coordinates.",
+        "NSMotionUsageDescription": "UVision uses the accelerometer to detect falls and crashes."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.uvision.safetyapp",
+      "config": {
+        "googleMaps": {
+          "apiKey": "${GOOGLE_MAPS_API_KEY}"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "UVision needs your location to detect incidents and log them with GPS coordinates."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
